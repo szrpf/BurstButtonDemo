@@ -51,7 +51,7 @@ export default class BurstButton extends cc.Component {
     private pressedFrame: cc.SpriteFrame = null;
     @property({ type: cc.SpriteFrame, displayName: CC_DEV && '······禁用后换图', visible() { return this.effectNode !== null } })
     private disableFrame: cc.SpriteFrame = null;
-    @property({ type: AudioName, displayName: CC_DEV && '音效', tooltip: CC_DEV && '例如：填“Click”会播放音效\nAudio/Click' })
+    @property({ type: AudioName, displayName: CC_DEV && '音效', tooltip: CC_DEV && '把需要播放的音效文件拖进来' })
     private audio: AudioName = new AudioName();
     private effectSprite: cc.Sprite = null;
     private normalScale: number = 1;
