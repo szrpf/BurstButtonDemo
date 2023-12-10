@@ -54,12 +54,14 @@ export default class BurstButton extends cc.Component {
     @property({ type: AudioName, displayName: CC_DEV && '音效', tooltip: CC_DEV && '例如：填“Click”会播放音效\nAudio/Click' })
     private audio: AudioName = new AudioName();
     private effectSprite: cc.Sprite = null;
+    private normalScale: number = 1;
     private normalFrame: cc.SpriteFrame = null;
     private callback: (tag: string, event: string, ...parms: any[]) => void = () => { };
     private warn = CC_EDITOR ? cc.warn : console.warn;
 
     protected start() {
         this.name = this.node.name;
+        this.normalScale = this.node.scale;
         if (this.effectNode) {
             this.effectSprite = this.effectNode.getComponent(cc.Sprite);
             this.normalFrame = this.effectSprite?.spriteFrame;
@@ -89,6 +91,7 @@ export default class BurstButton extends cc.Component {
             this.disableFrame && (this.effectSprite.spriteFrame = this.disableFrame);
             this.isBurst && this.unschedule(this.touchBurst);
             this.node.targetOff(this);
+            this.node.scale = this.normalScale;
         }
     }
 
@@ -100,7 +103,7 @@ export default class BurstButton extends cc.Component {
         this.isBurst && this.schedule(this.touchBurst, this.intervalTime, cc.macro.REPEAT_FOREVER, this.delayTime);
         this.setColor(this.node, this.pressedColor);
         this.pressedFrame && (this.effectSprite.spriteFrame = this.pressedFrame);
-        this.node.scale *= this.pressScale;
+        this.node.scale = this.pressScale * this.normalScale;
         this.audio.press && cc.audioEngine.playEffect(this.audio.press, false);
         this.callback(this.node.name, 'press', this);
     }
@@ -109,7 +112,7 @@ export default class BurstButton extends cc.Component {
         this.isBurst && this.unschedule(this.touchBurst);
         this.setColor(this.node, cc.color(255, 255, 255));
         this.effectSprite && (this.effectSprite.spriteFrame = this.normalFrame);
-        this.node.scale /= this.pressScale;
+        this.node.scale = this.normalScale;
         this.audio.release && cc.audioEngine.playEffect(this.audio.release, false);
         this.callback(this.node.name, 'release', this);
     }
@@ -118,7 +121,7 @@ export default class BurstButton extends cc.Component {
         this.isBurst && this.unschedule(this.touchBurst);
         this.setColor(this.node, cc.color(255, 255, 255));
         this.effectSprite && (this.effectSprite.spriteFrame = this.normalFrame);
-        this.node.scale /= this.pressScale;
+        this.node.scale = this.normalScale;
         this.audio.cancel && cc.audioEngine.playEffect(this.audio.cancel, false);
         this.callback(this.node.name, 'cancel', this);
     }

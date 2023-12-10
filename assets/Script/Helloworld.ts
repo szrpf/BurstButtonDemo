@@ -12,8 +12,10 @@ export default class Helloworld extends cc.Component {
         titleNode.getComponent(cc.Label).string = value;
         titleNode.scaleY = 0;
         cc.tween(titleNode).to(0.1, { scaleY: 1 }).start();
+        this.log(value);
     }
     private countNum: number = 0;
+    private log = CC_EDITOR ? cc.log : console.log;
 
     start() {
         let buttons = this.node.getComponentsInChildren(BurstButton);
@@ -34,23 +36,28 @@ export default class Helloworld extends cc.Component {
                 break;
             case 'ColorBtn': this.title = `可以设置按下后变色、禁用后变色`; break;
             case 'ImageBtn': this.title = `可以设置按下后换图、禁用后换图`; break;
-            case 'DeepBtn': this.title = `无论按钮在哪个层级都会触发`; break;
-            case 'ExtendBtn': this.title = `实现方式参考编辑器里的层级目录`; break;
+            case 'DeepBtn': this.title = `无论按钮在哪个目录层级都会触发`; break;
+            case 'ExtendBtn': this.title = `实现方式参考编辑器里的目录层级`; break;
             case '+':
-                if (event === 'release') {
-                    this.countNum = Math.min(this.countNum + 1, 10);
-                    parms[0].isActive = this.countNum !== 10;
-                    cc.find('Count/-', this.node).getComponent(BurstButton).isActive = this.countNum !== 0;
-                    cc.find('Count/Num', this.node).getComponent(cc.Label).string = this.countNum.toString();
+                switch (event) {
+                    case 'press':
+                    case 'burst':
+                        this.countNum = Math.min(this.countNum + 1, 10);
+                        parms[0].isActive = this.countNum !== 10;
+                        cc.find('Count/-', this.node).getComponent(BurstButton).isActive = this.countNum !== 0;
+                        cc.find('Count/Num', this.node).getComponent(cc.Label).string = this.countNum.toString();
+                        break;
                 }
+                this.title = `按住可以连发`;
                 break;
             case '-':
-                if (event === 'release') {
+                if (event === 'press' || event === 'burst') {
                     this.countNum = Math.max(this.countNum - 1, 0);
                     cc.find('Count/+', this.node).getComponent(BurstButton).isActive = this.countNum !== 10;
                     parms[0].isActive = this.countNum !== 0;
                     cc.find('Count/Num', this.node).getComponent(cc.Label).string = this.countNum.toString();
                 }
+                this.title = `按住可以连发`;
                 break;
         }
     }
