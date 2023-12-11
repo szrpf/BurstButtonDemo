@@ -40,6 +40,10 @@ export default class BurstButton extends cc.Component {
     private intervalTime: number = 0.1;
     @property({ min: 0, displayName: CC_DEV && '按下后缩放' })
     private pressScale: number = 0.9;
+    @property({ displayName: CC_DEV && '按下后变色' })
+    private pressColor: cc.Color = cc.color(255, 255, 255);
+    @property({ displayName: CC_DEV && '禁用后变色' })
+    private disableColor: cc.Color = cc.color(100, 100, 100);
     @property
     private _effectNode: cc.Node = null;
     @property({ type: cc.Node, displayName: CC_DEV && '动画节点', tooltip: CC_DEV && '换图动画作用于哪个节点' })
@@ -48,12 +52,8 @@ export default class BurstButton extends cc.Component {
         this._effectNode = value;
         this.updateEffectNode();
     }
-    @property({ displayName: CC_DEV && '······按下后变色', visible() { return this.effectNode !== null } })
-    private pressColor: cc.Color = cc.color(255, 255, 255);
     @property({ type: cc.SpriteFrame, displayName: CC_DEV && '······按下后换图', visible() { return this.effectNode !== null } })
     private pressFrame: cc.SpriteFrame = null;
-    @property({ displayName: CC_DEV && '······禁用后变色', visible() { return this.effectNode !== null } })
-    private disableColor: cc.Color = cc.color(100, 100, 100);
     @property({ type: cc.SpriteFrame, displayName: CC_DEV && '······禁用后换图', visible() { return this.effectNode !== null } })
     private disableFrame: cc.SpriteFrame = null;
     @property({ type: Audio, displayName: CC_DEV && '音效', tooltip: CC_DEV && '把需要播放的音效文件拖进来' })
@@ -85,24 +85,23 @@ export default class BurstButton extends cc.Component {
         if (this.effectNode) {
             this.effectSprite = this.effectNode.getComponent(cc.Sprite);
             this.normalFrame = this.effectSprite?.spriteFrame;
+            if (this.effectSprite === null) {
+                console.warn(`动画节点没有cc.Sprite，无法换图！(${this.node?.parent?.parent.name}/${this.node?.parent.name}/${this.node.name})`);
+            }
         }
     }
 
     private updateActive() {
         if (this.isActive) {
-            if (this.effectNode) {
-                this.effectNode.color = cc.color(255, 255, 255);
-                this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame);
-            }
+            this.setColor(this.node, cc.color(255, 255, 255));
+            this.effectNode && this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame);
             this.node.on(cc.Node.EventType.TOUCH_START, this.touchStart, this);
             this.node.on(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
             this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.touchCancel, this);
         } else {
             this.isBurst && this.unschedule(this.touchBurst);
-            if (this.effectNode) {
-                this.effectNode.color = this.disableColor;
-                this.effectSprite && this.disableFrame && (this.effectSprite.spriteFrame = this.disableFrame);
-            }
+            this.setColor(this.node, this.disableColor);
+            this.effectNode && this.effectSprite && this.disableFrame && (this.effectSprite.spriteFrame = this.disableFrame);
             this.node.scale = this.normalScale;
             this.node.off(cc.Node.EventType.TOUCH_START, this.touchStart, this);
             this.node.off(cc.Node.EventType.TOUCH_END, this.touchEnd, this);
@@ -116,10 +115,8 @@ export default class BurstButton extends cc.Component {
 
     private touchStart() {
         this.isBurst && this.schedule(this.touchBurst, this.intervalTime, cc.macro.REPEAT_FOREVER, this.delayTime);
-        if (this.effectNode) {
-            this.effectNode.color = this.pressColor;
-            this.effectSprite && this.pressFrame && (this.effectSprite.spriteFrame = this.pressFrame);
-        }
+        this.setColor(this.node, this.pressColor);
+        this.effectNode && this.effectSprite && this.pressFrame && (this.effectSprite.spriteFrame = this.pressFrame);
         this.node.scale = this.pressScale * this.normalScale;
         this.audio.press && cc.audioEngine.playEffect(this.audio.press, false);
         this.callback(this.node.name, 'press', this);
@@ -127,10 +124,8 @@ export default class BurstButton extends cc.Component {
 
     private touchEnd() {
         this.isBurst && this.unschedule(this.touchBurst);
-        if (this.effectNode) {
-            this.effectNode.color = cc.color(255, 255, 255);
-            this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame);
-        }
+        this.setColor(this.node, cc.color(255, 255, 255));
+        this.effectNode && this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame);
         this.node.scale = this.normalScale;
         this.audio.release && cc.audioEngine.playEffect(this.audio.release, false);
         this.callback(this.node.name, 'release', this);
@@ -138,13 +133,17 @@ export default class BurstButton extends cc.Component {
 
     private touchCancel() {
         this.isBurst && this.unschedule(this.touchBurst);
-        if (this.effectNode) {
-            this.effectNode.color = cc.color(255, 255, 255);
-            this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame);
-        }
+        this.setColor(this.node, cc.color(255, 255, 255));
+        this.effectNode && this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame);
         this.node.scale = this.normalScale;
         this.audio.cancel && cc.audioEngine.playEffect(this.audio.cancel, false);
         this.callback(this.node.name, 'cancel', this);
+    }
+
+    private setColor(node: cc.Node, color: cc.Color) {
+        if (node.color === color) return;
+        node.color = color;
+        for (let i = node.childrenCount - 1; i > -1; this.setColor(node.children[i--], color));
     }
 
     protected onDestroy() {

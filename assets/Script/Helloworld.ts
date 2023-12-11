@@ -12,10 +12,9 @@ export default class Helloworld extends cc.Component {
         titleNode.getComponent(cc.Label).string = value;
         titleNode.scaleY = 0;
         cc.tween(titleNode).to(0.1, { scaleY: 1 }).start();
-        this.log(value);
+        console.log(value);
     }
     private countNum: number = 0;
-    private log = CC_EDITOR ? cc.log : console.log;
 
     start() {
         let buttons = this.node.getComponentsInChildren(BurstButton);
