@@ -44,7 +44,7 @@ export default class Helloworld extends cc.Component {
                     case 'burst':
                         this.countNum = Math.min(this.countNum + 1, 10);
                         parms[0].isActive = this.countNum !== 10;
-                        cc.find('Count/-', this.node).getComponent(BurstButton).isActive = this.countNum !== 0;
+                        cc.find('Count/-', this.node).getComponent(BurstButton).isActive = true;
                         cc.find('Count/Num', this.node).getComponent(cc.Label).string = this.countNum.toString();
                         break;
                 }
@@ -53,7 +53,7 @@ export default class Helloworld extends cc.Component {
             case '-':
                 if (event === 'press' || event === 'burst') {
                     this.countNum = Math.max(this.countNum - 1, 0);
-                    cc.find('Count/+', this.node).getComponent(BurstButton).isActive = this.countNum !== 10;
+                    cc.find('Count/+', this.node).getComponent(BurstButton).isActive = true;
                     parms[0].isActive = this.countNum !== 0;
                     cc.find('Count/Num', this.node).getComponent(cc.Label).string = this.countNum.toString();
                 }

@@ -497,7 +497,7 @@
         "__id__": 14
       },
       {
-        "__id__": 16
+        "__id__": 15
       }
     ],
     "_prefab": null,
@@ -569,9 +569,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_contentSize": {
@@ -665,53 +665,6 @@
     "_id": "983u45fadCqaoAoB+R2CmS"
   },
   {
-    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 10
-    },
-    "_enabled": true,
-    "_isActive": false,
-    "isBurst": false,
-    "delayTime": 0,
-    "intervalTime": 0.1,
-    "pressScale": 0.9,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "disableColor": {
-      "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
-      "a": 255
-    },
-    "effectNode": null,
-    "pressedFrame": null,
-    "disableFrame": null,
-    "audio": {
-      "__id__": 15
-    },
-    "_id": "2dZ4bBytpKeopbYnKDJexb"
-  },
-  {
-    "__type__": "AudioName",
-    "press": {
-      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
-    },
-    "release": {
-      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
-    },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -744,6 +697,55 @@
     "_id": "83W4nm/6dIYpLZ8jhcsNj9"
   },
   {
+    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 10
+    },
+    "_enabled": true,
+    "_isActive": false,
+    "isBurst": false,
+    "delayTime": 0,
+    "intervalTime": 0.1,
+    "pressScale": 0.9,
+    "_effectNode": {
+      "__id__": 10
+    },
+    "pressColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressFrame": null,
+    "disableColor": {
+      "__type__": "cc.Color",
+      "r": 100,
+      "g": 100,
+      "b": 100,
+      "a": 255
+    },
+    "disableFrame": null,
+    "audio": {
+      "__id__": 16
+    },
+    "_id": "08vOW368RA36F+6rVWnzLP"
+  },
+  {
+    "__type__": "Audio",
+    "press": {
+      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
+    },
+    "release": {
+      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
+    },
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_name": "NormalBtn",
     "_objFlags": 0,
@@ -761,7 +763,7 @@
         "__id__": 21
       },
       {
-        "__id__": 23
+        "__id__": 22
       }
     ],
     "_prefab": null,
@@ -929,53 +931,6 @@
     "_id": "26H4gFbbVFY5bqOcXi7Ckt"
   },
   {
-    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 17
-    },
-    "_enabled": true,
-    "_isActive": true,
-    "isBurst": false,
-    "delayTime": 0,
-    "intervalTime": 0.1,
-    "pressScale": 0.9,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "disableColor": {
-      "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
-      "a": 255
-    },
-    "effectNode": null,
-    "pressedFrame": null,
-    "disableFrame": null,
-    "audio": {
-      "__id__": 22
-    },
-    "_id": "fdqG7Dl0tK04+h1ntSZ4fa"
-  },
-  {
-    "__type__": "AudioName",
-    "press": {
-      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
-    },
-    "release": {
-      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
-    },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -1008,6 +963,53 @@
     "_id": "8cqZYvI5tLbopG5QFCur1A"
   },
   {
+    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 17
+    },
+    "_enabled": true,
+    "_isActive": true,
+    "isBurst": false,
+    "delayTime": 0,
+    "intervalTime": 0.1,
+    "pressScale": 0.9,
+    "_effectNode": null,
+    "pressColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressFrame": null,
+    "disableColor": {
+      "__type__": "cc.Color",
+      "r": 100,
+      "g": 100,
+      "b": 100,
+      "a": 255
+    },
+    "disableFrame": null,
+    "audio": {
+      "__id__": 23
+    },
+    "_id": "afNCu6NVtNnLYAyLi8u/vK"
+  },
+  {
+    "__type__": "Audio",
+    "press": {
+      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
+    },
+    "release": {
+      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
+    },
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_name": "BurstBtn",
     "_objFlags": 0,
@@ -1025,7 +1027,7 @@
         "__id__": 28
       },
       {
-        "__id__": 30
+        "__id__": 29
       }
     ],
     "_prefab": null,
@@ -1193,53 +1195,6 @@
     "_id": "c3JIDsfzdNRpBqlgN39e/f"
   },
   {
-    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 24
-    },
-    "_enabled": true,
-    "_isActive": true,
-    "isBurst": true,
-    "delayTime": 0,
-    "intervalTime": 0.1,
-    "pressScale": 0.9,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "disableColor": {
-      "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
-      "a": 255
-    },
-    "effectNode": null,
-    "pressedFrame": null,
-    "disableFrame": null,
-    "audio": {
-      "__id__": 29
-    },
-    "_id": "6eaZOHj7hAEZSAu43s+DVI"
-  },
-  {
-    "__type__": "AudioName",
-    "press": {
-      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
-    },
-    "release": {
-      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
-    },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -1272,6 +1227,53 @@
     "_id": "9bhl8HXrFHL5OggmeMO9E6"
   },
   {
+    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 24
+    },
+    "_enabled": true,
+    "_isActive": true,
+    "isBurst": true,
+    "delayTime": 0,
+    "intervalTime": 0.15,
+    "pressScale": 0.9,
+    "_effectNode": null,
+    "pressColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressFrame": null,
+    "disableColor": {
+      "__type__": "cc.Color",
+      "r": 100,
+      "g": 100,
+      "b": 100,
+      "a": 255
+    },
+    "disableFrame": null,
+    "audio": {
+      "__id__": 30
+    },
+    "_id": "98J9dE7QdKSKd/KuI2kGLw"
+  },
+  {
+    "__type__": "Audio",
+    "press": {
+      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
+    },
+    "release": {
+      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
+    },
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_name": "ColorBtn",
     "_objFlags": 0,
@@ -1289,7 +1291,7 @@
         "__id__": 35
       },
       {
-        "__id__": 37
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1457,53 +1459,6 @@
     "_id": "b0hfGR3PJMO4UDwq/mW6Ml"
   },
   {
-    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 31
-    },
-    "_enabled": true,
-    "_isActive": true,
-    "isBurst": false,
-    "delayTime": 0,
-    "intervalTime": 0.1,
-    "pressScale": 0.9,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 0,
-      "b": 0,
-      "a": 255
-    },
-    "disableColor": {
-      "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
-      "a": 255
-    },
-    "effectNode": null,
-    "pressedFrame": null,
-    "disableFrame": null,
-    "audio": {
-      "__id__": 36
-    },
-    "_id": "e7Q+4WcHlCoIqcIK8p+G0t"
-  },
-  {
-    "__type__": "AudioName",
-    "press": {
-      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
-    },
-    "release": {
-      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
-    },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -1536,6 +1491,55 @@
     "_id": "77lsAkXwZL2IIsye7Pq7zP"
   },
   {
+    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 31
+    },
+    "_enabled": true,
+    "_isActive": true,
+    "isBurst": false,
+    "delayTime": 0,
+    "intervalTime": 0.1,
+    "pressScale": 0.9,
+    "_effectNode": {
+      "__id__": 31
+    },
+    "pressColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 0,
+      "b": 0,
+      "a": 255
+    },
+    "pressFrame": null,
+    "disableColor": {
+      "__type__": "cc.Color",
+      "r": 100,
+      "g": 100,
+      "b": 100,
+      "a": 255
+    },
+    "disableFrame": null,
+    "audio": {
+      "__id__": 37
+    },
+    "_id": "9ekIGsHEFN3aLoaQqWpTCZ"
+  },
+  {
+    "__type__": "Audio",
+    "press": {
+      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
+    },
+    "release": {
+      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
+    },
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
+  },
+  {
     "__type__": "cc.Node",
     "_name": "ImageBtn",
     "_objFlags": 0,
@@ -1553,7 +1557,7 @@
         "__id__": 42
       },
       {
-        "__id__": 44
+        "__id__": 43
       }
     ],
     "_prefab": null,
@@ -1721,57 +1725,6 @@
     "_id": "beAZPzjVZPmI89VCSh7Jr4"
   },
   {
-    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 38
-    },
-    "_enabled": true,
-    "_isActive": true,
-    "isBurst": false,
-    "delayTime": 0,
-    "intervalTime": 0.1,
-    "pressScale": 0.9,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "disableColor": {
-      "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
-      "a": 255
-    },
-    "effectNode": {
-      "__id__": 38
-    },
-    "pressedFrame": {
-      "__uuid__": "e7f47be3-7635-43f3-9d55-aa6082a0cb63"
-    },
-    "disableFrame": null,
-    "audio": {
-      "__id__": 43
-    },
-    "_id": "eeqEuaqsRFtqy2aU8tilXr"
-  },
-  {
-    "__type__": "AudioName",
-    "press": {
-      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
-    },
-    "release": {
-      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
-    },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -1802,6 +1755,57 @@
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": "e75vTB+nRLgosFPLk+CFIN"
+  },
+  {
+    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 38
+    },
+    "_enabled": true,
+    "_isActive": true,
+    "isBurst": false,
+    "delayTime": 0,
+    "intervalTime": 0.1,
+    "pressScale": 0.9,
+    "_effectNode": {
+      "__id__": 38
+    },
+    "pressColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressFrame": {
+      "__uuid__": "e7f47be3-7635-43f3-9d55-aa6082a0cb63"
+    },
+    "disableColor": {
+      "__type__": "cc.Color",
+      "r": 100,
+      "g": 100,
+      "b": 100,
+      "a": 255
+    },
+    "disableFrame": null,
+    "audio": {
+      "__id__": 44
+    },
+    "_id": "69xyqXdGNO8IbOe7fO9taN"
+  },
+  {
+    "__type__": "Audio",
+    "press": {
+      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
+    },
+    "release": {
+      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
+    },
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
   },
   {
     "__type__": "cc.Node",
@@ -2069,7 +2073,7 @@
         "__id__": 53
       },
       {
-        "__id__": 55
+        "__id__": 54
       }
     ],
     "_prefab": null,
@@ -2237,53 +2241,6 @@
     "_id": "27N44B+NtBRLth7EUicSfe"
   },
   {
-    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 49
-    },
-    "_enabled": true,
-    "_isActive": true,
-    "isBurst": false,
-    "delayTime": 0,
-    "intervalTime": 0.1,
-    "pressScale": 0.9,
-    "pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "disableColor": {
-      "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
-      "a": 255
-    },
-    "effectNode": null,
-    "pressedFrame": null,
-    "disableFrame": null,
-    "audio": {
-      "__id__": 54
-    },
-    "_id": "86PC5iQDBPgbYVXILCTOHf"
-  },
-  {
-    "__type__": "AudioName",
-    "press": {
-      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
-    },
-    "release": {
-      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
-    },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
-  },
-  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -2314,6 +2271,53 @@
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": "6cw7rvMLJAG5ep1YCx1nE7"
+  },
+  {
+    "__type__": "9f686h3KDRH+I6C6gE9fRBZ",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 49
+    },
+    "_enabled": true,
+    "_isActive": true,
+    "isBurst": false,
+    "delayTime": 0,
+    "intervalTime": 0.1,
+    "pressScale": 0.9,
+    "_effectNode": null,
+    "pressColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "pressFrame": null,
+    "disableColor": {
+      "__type__": "cc.Color",
+      "r": 100,
+      "g": 100,
+      "b": 100,
+      "a": 255
+    },
+    "disableFrame": null,
+    "audio": {
+      "__id__": 55
+    },
+    "_id": "6bBJsd0jxK4L4Dpk4VOG4s"
+  },
+  {
+    "__type__": "Audio",
+    "press": {
+      "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
+    },
+    "release": {
+      "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
+    },
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
   },
   {
     "__type__": "cc.Node",
@@ -2607,13 +2611,15 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "pressedColor": {
+    "_effectNode": null,
+    "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
       "b": 255,
       "a": 255
     },
+    "pressFrame": null,
     "disableColor": {
       "__type__": "cc.Color",
       "r": 100,
@@ -2621,25 +2627,21 @@
       "b": 100,
       "a": 255
     },
-    "effectNode": null,
-    "pressedFrame": null,
     "disableFrame": null,
     "audio": {
       "__id__": 63
     },
-    "_id": "83O0OI4ixEIIG+rXjVXAhk"
+    "_id": "9fTvnzdbpDT4TVs2RN0woa"
   },
   {
-    "__type__": "AudioName",
+    "__type__": "Audio",
     "press": {
       "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
     },
     "release": {
       "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
     },
-    "cancel": {
-      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
-    }
+    "cancel": null
   },
   {
     "__type__": "cc.Node",
@@ -2785,15 +2787,19 @@
     "_isActive": false,
     "isBurst": true,
     "delayTime": 0.5,
-    "intervalTime": 0.05,
+    "intervalTime": 0.1,
     "pressScale": 0.9,
-    "pressedColor": {
+    "_effectNode": {
+      "__id__": 65
+    },
+    "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
       "b": 255,
       "a": 255
     },
+    "pressFrame": null,
     "disableColor": {
       "__type__": "cc.Color",
       "r": 100,
@@ -2801,16 +2807,14 @@
       "b": 100,
       "a": 255
     },
-    "effectNode": null,
-    "pressedFrame": null,
     "disableFrame": null,
     "audio": {
       "__id__": 67
     },
-    "_id": "cbZ+wydv1GpqZT3J68w8F7"
+    "_id": "90WNBAIJNF7aHl7LktneXX"
   },
   {
-    "__type__": "AudioName",
+    "__type__": "Audio",
     "press": {
       "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
     },
@@ -2929,15 +2933,19 @@
     "_isActive": true,
     "isBurst": true,
     "delayTime": 0.5,
-    "intervalTime": 0.05,
+    "intervalTime": 0.1,
     "pressScale": 0.9,
-    "pressedColor": {
+    "_effectNode": {
+      "__id__": 69
+    },
+    "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
       "g": 255,
       "b": 255,
       "a": 255
     },
+    "pressFrame": null,
     "disableColor": {
       "__type__": "cc.Color",
       "r": 100,
@@ -2945,16 +2953,14 @@
       "b": 100,
       "a": 255
     },
-    "effectNode": null,
-    "pressedFrame": null,
     "disableFrame": null,
     "audio": {
       "__id__": 71
     },
-    "_id": "d4ZXThZkxIwqnChTLt/vXI"
+    "_id": "7bbqFVEndGZot3PuIB1vTy"
   },
   {
-    "__type__": "AudioName",
+    "__type__": "Audio",
     "press": {
       "__uuid__": "1d361d06-04e2-4f6b-b2bf-445aa4e30bdc"
     },
