@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "_opacity": 255,
@@ -504,9 +504,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_contentSize": {
@@ -532,7 +532,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "_eulerAngles": {
@@ -569,9 +569,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_contentSize": {
@@ -704,11 +704,11 @@
       "__id__": 10
     },
     "_enabled": true,
-    "_isActive": false,
     "isBurst": false,
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -968,11 +968,11 @@
       "__id__": 17
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": false,
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1232,11 +1232,11 @@
       "__id__": 24
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": true,
     "delayTime": 0,
     "intervalTime": 0.15,
     "pressScale": 0.9,
+    "type": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1361,9 +1361,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 0,
       "g": 255,
-      "b": 255,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
@@ -1496,11 +1496,11 @@
       "__id__": 31
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": false,
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1760,11 +1760,11 @@
       "__id__": 38
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": false,
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 2,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2276,11 +2276,11 @@
       "__id__": 49
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": false,
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2602,11 +2602,11 @@
       "__id__": 56
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": false,
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2637,7 +2637,9 @@
     "release": {
       "__uuid__": "0b23ff53-de50-457b-8efb-620a53c2167a"
     },
-    "cancel": null
+    "cancel": {
+      "__uuid__": "e6c9b4d9-00af-40ea-9d6e-84b94f074e69"
+    }
   },
   {
     "__type__": "cc.Node",
@@ -2728,9 +2730,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_contentSize": {
@@ -2780,11 +2782,11 @@
       "__id__": 65
     },
     "_enabled": true,
-    "_isActive": false,
     "isBurst": true,
     "delayTime": 0.5,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2924,11 +2926,11 @@
       "__id__": 69
     },
     "_enabled": true,
-    "_isActive": true,
     "isBurst": true,
     "delayTime": 0.5,
     "intervalTime": 0.1,
     "pressScale": 0.9,
+    "type": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,

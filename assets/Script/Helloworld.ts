@@ -1,7 +1,5 @@
 import BurstButton from "./BurstButton";
-
 const { ccclass, property } = cc._decorator;
-
 @ccclass
 export default class Helloworld extends cc.Component {
     private _title: string = null;
@@ -17,6 +15,8 @@ export default class Helloworld extends cc.Component {
     private countNum: number = 0;
 
     start() {
+        this.node.getChildByName('DisableBtn').getComponent(BurstButton).isActive = false;
+        cc.find('Count/-', this.node).getComponent(BurstButton).isActive = false;
         let buttons = this.node.getComponentsInChildren(BurstButton);
         for (let i = buttons.length - 1; i > -1; buttons[i--].setCallback(this.callback, this));
     }
