@@ -120,7 +120,7 @@ export default class BurstButton extends cc.Component {
     }
 
     private touchBurst() {
-        this.callback(this.node.name, 'burst', this);
+        this.callback(this.node.name, 'Burst', this);
     }
 
     private touchStart() {
@@ -131,7 +131,7 @@ export default class BurstButton extends cc.Component {
             case Type.换图: this.effectNode && this.effectSprite && this.pressFrame && (this.effectSprite.spriteFrame = this.pressFrame); break;
         }
         this.audio.press && cc.audioEngine.playEffect(this.audio.press, false);
-        this.callback(this.node.name, 'press', this);
+        this.callback(this.node.name, 'Press', this);
     }
 
     private touchEnd() {
@@ -142,7 +142,7 @@ export default class BurstButton extends cc.Component {
             case Type.换图: this.effectNode && this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame); break;
         }
         this.audio.release && cc.audioEngine.playEffect(this.audio.release, false);
-        this.callback(this.node.name, 'release', this);
+        this.callback(this.node.name, 'Release', this);
     }
 
     private touchCancel() {
@@ -153,7 +153,7 @@ export default class BurstButton extends cc.Component {
             case Type.换图: this.effectNode && this.effectSprite && this.normalFrame && (this.effectSprite.spriteFrame = this.normalFrame); break;
         }
         this.audio.cancel && cc.audioEngine.playEffect(this.audio.cancel, false);
-        this.callback(this.node.name, 'cancel', this);
+        this.callback(this.node.name, 'Cancel', this);
     }
     private initColor(node: cc.Node) {
         node['normalColor'] = node.color;
