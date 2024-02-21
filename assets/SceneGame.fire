@@ -708,7 +708,7 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 1,
+    "effectType": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -718,12 +718,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.1,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -972,7 +973,7 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 0,
+    "effectType": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -982,12 +983,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.1,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -1236,7 +1238,7 @@
     "delayTime": 0,
     "intervalTime": 0.15,
     "pressScale": 0.9,
-    "type": 0,
+    "effectType": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1246,12 +1248,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.1,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -1361,7 +1364,7 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
+      "r": 255,
       "g": 255,
       "b": 0,
       "a": 255
@@ -1500,7 +1503,7 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 1,
+    "effectType": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1510,12 +1513,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.2,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -1764,7 +1768,7 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 2,
+    "effectType": 2,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1774,13 +1778,14 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": {
-      "__id__": 38
+    "colorTime": 0.1,
+    "_effectSprite": {
+      "__id__": 42
     },
     "pressFrame": {
       "__uuid__": "e7f47be3-7635-43f3-9d55-aa6082a0cb63"
@@ -2280,7 +2285,7 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 0,
+    "effectType": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2290,12 +2295,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.1,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -2606,7 +2612,7 @@
     "delayTime": 0,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 0,
+    "effectType": 0,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2616,12 +2622,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.1,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -2786,7 +2793,7 @@
     "delayTime": 0.5,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 1,
+    "effectType": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2796,12 +2803,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.2,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
@@ -2930,7 +2938,7 @@
     "delayTime": 0.5,
     "intervalTime": 0.1,
     "pressScale": 0.9,
-    "type": 1,
+    "effectType": 1,
     "pressColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2940,12 +2948,13 @@
     },
     "disableColor": {
       "__type__": "cc.Color",
-      "r": 100,
-      "g": 100,
-      "b": 100,
+      "r": 80,
+      "g": 80,
+      "b": 80,
       "a": 255
     },
-    "_effectNode": null,
+    "colorTime": 0.2,
+    "_effectSprite": null,
     "pressFrame": null,
     "disableFrame": null,
     "audio": {
